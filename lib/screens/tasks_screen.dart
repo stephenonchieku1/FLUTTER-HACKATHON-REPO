@@ -148,11 +148,12 @@ class _TasksScreenState extends State<TasksScreen> {
             SizedBox(width: 8),
             Text(
               'Tasks App',
+              textAlign: TextAlign.right,
               style: TextStyle(color: Colors.white),
             ),
           ],
         ),
-        backgroundColor: const Color(0xFF883007),
+        backgroundColor: Color.fromARGB(255, 40, 19, 236),
         iconTheme: const IconThemeData(color: Colors.white),
       ),
       drawer: Drawer(
@@ -246,7 +247,8 @@ class _TasksScreenState extends State<TasksScreen> {
         ),
       ),
       // Floating action button to add new task
-      floatingActionButton: FloatingActionButton(
+      
+      floatingActionButton: FloatingActionButton(        
         onPressed: () {
           // Show the dialog to add a new task
           _showAddTaskDialog(context);

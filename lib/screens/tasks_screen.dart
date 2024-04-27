@@ -159,9 +159,13 @@ class _TasksScreenState extends State<TasksScreen> {
                 
               ),
               accountName: Text("Stephen",style:TextStyle(color:Colors.black,
-              fontWeight: FontWeight.w300,
+              fontWeight: FontWeight.w400,
               fontSize:22)),
-              accountEmail: Text("stephenonchieku1@gmail.com"),
+              accountEmail: Text("stephenonchieku1@gmail.com",
+              style:TextStyle(
+                color:Colors.white,
+                fontSize: 15
+              )),
             ),
             // Drawer menu items for different task categories
             ListTile(

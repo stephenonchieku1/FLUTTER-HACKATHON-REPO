@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:todolist/model/todo.dart'; // Import ToDo model class
 import 'package:todolist/widgets/todo_items.dart'; // Import ToDoItem widget
 // Enumeration to represent different task categories
@@ -155,8 +156,11 @@ class _TasksScreenState extends State<TasksScreen> {
             const UserAccountsDrawerHeader(
               currentAccountPicture: CircleAvatar(
                 backgroundImage: AssetImage("assets/profile.jpg"),
+                
               ),
-              accountName: Text("Stephen"),
+              accountName: Text("Stephen",style:TextStyle(color:Colors.black,
+              fontWeight: FontWeight.w300,
+              fontSize:22)),
               accountEmail: Text("stephenonchieku1@gmail.com"),
             ),
             // Drawer menu items for different task categories

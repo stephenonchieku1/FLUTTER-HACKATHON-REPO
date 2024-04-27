@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:todolist/model/todo.dart'; // Import ToDo model class
 import 'package:todolist/widgets/todo_items.dart'; // Import ToDoItem widget
+
 // Enumeration to represent different task categories
 enum TaskCategory {
   all,
@@ -19,7 +20,8 @@ class TasksScreen extends StatefulWidget {
 class _TasksScreenState extends State<TasksScreen> {
   List<ToDo> todosList = ToDo.todoList(); // List of all tasks
   List<ToDo> _foundToDo = []; // List of tasks to display based on category
-  TaskCategory _selectedCategory = TaskCategory.all; // Default selected category
+  TaskCategory _selectedCategory =
+      TaskCategory.all; // Default selected category
 
   @override
   void initState() {
@@ -35,10 +37,14 @@ class _TasksScreenState extends State<TasksScreen> {
           _foundToDo = todosList; // Display all tasks
           break;
         case TaskCategory.completed:
-          _foundToDo = todosList.where((todo) => todo.isDone).toList(); // Display completed tasks
+          _foundToDo = todosList
+              .where((todo) => todo.isDone)
+              .toList(); // Display completed tasks
           break;
         case TaskCategory.pending:
-          _foundToDo = todosList.where((todo) => !todo.isDone).toList(); // Display pending tasks
+          _foundToDo = todosList
+              .where((todo) => !todo.isDone)
+              .toList(); // Display pending tasks
           break;
       }
     });
@@ -156,16 +162,14 @@ class _TasksScreenState extends State<TasksScreen> {
             const UserAccountsDrawerHeader(
               currentAccountPicture: CircleAvatar(
                 backgroundImage: AssetImage("assets/profile.jpg"),
-                
               ),
-              accountName: Text("Stephen",style:TextStyle(color:Colors.black,
-              fontWeight: FontWeight.w400,
-              fontSize:22)),
+              accountName: Text("Stephen",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 22)),
               accountEmail: Text("stephenonchieku1@gmail.com",
-              style:TextStyle(
-                color:Colors.white,
-                fontSize: 15
-              )),
+                  style: TextStyle(color: Colors.white, fontSize: 15)),
             ),
             // Drawer menu items for different task categories
             ListTile(
@@ -176,7 +180,8 @@ class _TasksScreenState extends State<TasksScreen> {
             ListTile(
               title: const Text("Completed Tasks"),
               leading: const Icon(Icons.check_box),
-              onTap: () => _setSelectedCategory(TaskCategory.completed, context),
+              onTap: () =>
+                  _setSelectedCategory(TaskCategory.completed, context),
             ),
             ListTile(
               title: const Text("Pending Tasks"),
@@ -195,16 +200,17 @@ class _TasksScreenState extends State<TasksScreen> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
         child: Column(
           children: [
             // Search bar for filtering tasks (optional)
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Colors.white,                
                 borderRadius: BorderRadius.circular(20),
               ),
+              width:300,
               child: TextField(
                 onChanged: (keyword) {
                   // Implement search functionality if needed

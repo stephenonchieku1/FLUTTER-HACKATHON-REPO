@@ -157,7 +157,7 @@ class _TasksScreenState extends State<TasksScreen> {
                 backgroundImage: AssetImage("assets/profile.jpg"),
               ),
               accountName: Text("Stephen"),
-              accountEmail: Text("stephen@gmail.com"),
+              accountEmail: Text("stephenonchieku1@gmail.com"),
             ),
             // Drawer menu items for different task categories
             ListTile(

@@ -207,10 +207,11 @@ class _TasksScreenState extends State<TasksScreen> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               decoration: BoxDecoration(
-                color: Colors.white,                
+                color: Colors.grey,  
+                       
                 borderRadius: BorderRadius.circular(20),
               ),
-              width:300,
+              width:300,             
               child: TextField(
                 onChanged: (keyword) {
                   // Implement search functionality if needed

@@ -17,17 +17,17 @@ class ToDoItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: 20),  // Set margin for the ListTile container
+      margin: const EdgeInsets.only(bottom: 20),  // Set margin for the ListTile container
       child: ListTile(
         onTap: () {
           onToDoChanged(todo);  // Invoke callback function when the item is tapped
         },
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(
             Radius.circular(20),  // Set rounded corners for the ListTile
           ),
         ),
-        contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),  // Set content padding
+        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),  // Set content padding
         tileColor: Colors.white,  // Set background color of the ListTile
         leading: Icon(
           todo.isDone ? Icons.check_box : Icons.check_box_outline_blank,  // Display check box icon based on completion status
@@ -42,8 +42,8 @@ class ToDoItem extends StatelessWidget {
           ),
         ),
         trailing: Container(
-          padding: EdgeInsets.all(0),
-          margin: EdgeInsets.symmetric(vertical: 12),
+          padding: const EdgeInsets.all(0),
+          margin: const EdgeInsets.symmetric(vertical: 12),
           height: 35,
           width: 35,
           decoration: BoxDecoration(
@@ -54,7 +54,7 @@ class ToDoItem extends StatelessWidget {
             onPressed: () {
               onDeleteItem(todo.id);  // Invoke callback function when delete button is pressed, passing task ID
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.delete,
               size: 18,
               color: Colors.green,  // Set icon color to white
